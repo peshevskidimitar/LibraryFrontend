@@ -17,6 +17,9 @@ const header = (props) => {
                                 <a className="nav-link active" aria-current="page" href="/books">Books</a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link" href="/categories">Categories</a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link" href="/authors">Authors</a>
                             </li>
                             <li className="nav-item">

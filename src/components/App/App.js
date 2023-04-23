@@ -7,8 +7,8 @@ import Authors from "../Authors/authors";
 import Books from "../Books/BookList/books";
 import Header from "../Header/header";
 import BookAdd from "../Books/BookAdd/bookAdd";
-import data from "bootstrap/js/src/dom/data";
 import BookEdit from "../Books/BookEdit/bookEdit";
+import Categories from "../Books/Categories/categories";
 
 class App extends React.Component {
 
@@ -43,6 +43,7 @@ class App extends React.Component {
                                                                       onEdit={this.getBook}
                                                                       onDelete={this.deleteBook}
                                                                       onBorrow={this.borrowBook}/>}/>
+                    <Route path={"/categories"} exact render={() => <Categories categories={this.state.categories}/>}/>
                     <Route path={"/"} exact><Redirect to={"/books"}/></Route>
                 </BrowserRouter>
             </div>
