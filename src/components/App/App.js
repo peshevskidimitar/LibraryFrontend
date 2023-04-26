@@ -44,7 +44,11 @@ class App extends React.Component {
                                                                       onDelete={this.deleteBook}
                                                                       onBorrow={this.borrowBook}/>}/>
                     <Route path={"/categories"} exact render={() => <Categories categories={this.state.categories}/>}/>
-                    <Route path={"/"} exact><Redirect to={"/books"}/></Route>
+                    <Route path={"/"} exact render={() => <Books books={this.state.books}
+                                                                       onEdit={this.getBook}
+                                                                       onDelete={this.deleteBook}
+                                                                       onBorrow={this.borrowBook}/>}></Route>
+                    <Redirect to={"/books"}/>
                 </BrowserRouter>
             </div>
         );
